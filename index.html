@@ -15,7 +15,6 @@
 
 <div id='map'></div>
 <script>
-map.legendControl.addLegend('Locations of Farmers Markets and Grocery Stores in Washington, DC')
 mapboxgl.accessToken = 'pk.eyJ1IjoibG90YW5uYW8iLCJhIjoiNTUyZGE3MDU2YjQ1M2FlNzQwZWVhODdjNzc0M2I4MjEifQ.Z_kqcaVT3lini0S6GkX2PQ';
 var map = new mapboxgl.Map({
     container: 'map', // container id
@@ -23,7 +22,7 @@ var map = new mapboxgl.Map({
     center: [-77.02, 38.90], // starting position
     zoom: 10.67 // starting zoom
 });
-
+map.legendControl.addLegend('<strong>Locations of Grocery Stores and Farmers Markets in Washington, DC</strong>')
 </script>
 
 </body>
