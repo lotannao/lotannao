@@ -27,11 +27,11 @@ map.on('load', function(){
 
     // Add a new source from our GeoJSON data and set the
     // 'cluster' option to true.
-    map.addSource("earthquakes", {
+    map.addSource("farmersmarket", {
         type: "geojson",
         // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
         // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-        data: "https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
+        data: "https://github.com/lotannao/lotannao/blob/gh-pages/farmersmarket.geojson",
         cluster: true,
         clusterMaxZoom: 14, // Max zoom to cluster points on
         clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
@@ -43,7 +43,7 @@ map.on('load', function(){
     map.addLayer({
         "id": "non-cluster-markers",
         "type": "symbol",
-        "source": "earthquakes",
+        "source": "farmersmarket",
         "layout": {
             "icon-image": "marker-15"
         }
@@ -61,7 +61,7 @@ map.on('load', function(){
         map.addLayer({
             "id": "cluster-" + i,
             "type": "circle",
-            "source": "earthquakes",
+            "source": "farmersmarket",
             "paint": {
                 "circle-color": layer[1],
                 "circle-radius": 18
@@ -78,7 +78,7 @@ map.on('load', function(){
     map.addLayer({
         "id": "cluster-count",
         "type": "symbol",
-        "source": "earthquakes",
+        "source": "farmersmarket",
         "layout": {
             "text-field": "{point_count}",
             "text-font": [
