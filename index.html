@@ -22,6 +22,8 @@ var map = new mapboxgl.Map({
     center: [-77.02, 38.90], // starting position
     zoom: 10.67 // starting zoom
 });
+var myLayer = L.mapbox.featureLayer().addTo(map);
+myLayer.setGeoJSON(geojson);
 map.legendControl.addLegend('<strong>Locations of Grocery Stores and Farmers Markets in Washington, DC</strong>')
 </script>
 
