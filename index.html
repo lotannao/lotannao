@@ -7,7 +7,7 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
     <style>
-        body { margin:10; padding:10; }
+        body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
 </head>
@@ -23,6 +23,8 @@ var map = new mapboxgl.Map({
     zoom: 10.67 // starting zoom
 });
 </script>
+
+map.legendControl.addLegend('Locations of Farmers Markets and Grocery Stores in Washington, DC')
 
 </body>
 </html>
