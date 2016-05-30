@@ -23,30 +23,6 @@ var map = new mapboxgl.Map({
     zoom: 10.67 // starting zoom
 });
 
-map.on('load', function () {
-    map.addSource("markers", {
-        "type": "geojson",
-        "data": {
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.0547794578,
-          38.9085770823,
-          0
-        ]
-      },
-      "properties": {
-        "name": 1,
-        "styleUrl": "#style1",
-        "styleHash": "448bfb6d",
-        "description": "<p>Rose Park Farmers Market</p><p>Farmers Market</p><p>Local Business & Food</p><p>NULL</p><p>26th Street NW & O Street NW</p><p>202-333-4946</p><p>NULL</p><p>NULL</p><p>Jen</p><p>http://www.dcfoodfinder.org/</p><p>2009</p><p>395248.988794</p><p>137857.987965</p><p>15719</p><p>NULL</p><p>Locally grown fresh fruits and vegetables. April-Oct. Wednesday. WIC and Senior Nutrition coupons accepted.</p><p>jennifer.guillaume@dc.gov _ 535-2252</p>"
-      }
-    }
 </script>
 
 </body>
