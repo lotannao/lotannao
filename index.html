@@ -23,6 +23,829 @@ var map = new mapboxgl.Map({
     zoom: 10.67 // starting zoom
 });
 
+map.on('load', function () {
+    map.addSource("markers", {
+        "type": "geojson",
+        "data": {
+          "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9865515196,
+          38.8835490629,
+          0
+        ]
+      },
+      "properties": {
+        "name": 1,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>415 14TH STREET SE</p><p>2025474333</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>401167.04</p><p>135078.34</p><p>26239</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1042    0109</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0729991621,
+          38.9343514937,
+          0
+        ]
+      },
+      "properties": {
+        "name": 2,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>3336 Wisconsin Ave NW</p><p>(202) 237-5820</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>393671.02</p><p>140720.27</p><p>223125</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1920    0832</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0248588317,
+          38.9384563708,
+          0
+        ]
+      },
+      "properties": {
+        "name": 3,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>3830 GEORGIA AVENUE NW</p><p>2028821140</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>397845.01</p><p>141173.71</p><p>225076</p><p>Ward 4</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2905    0814</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9474572086,
+          38.8931397816,
+          0
+        ]
+      },
+      "properties": {
+        "name": 4,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>322 40TH STREET NE</p><p>2023972802</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>404558.4</p><p>136144.21</p><p>295141</p><p>Ward 7</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>5051N   0840</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0335677516,
+          38.9094991071,
+          0
+        ]
+      },
+      "properties": {
+        "name": 5,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Whole Foods</p><p>1440 P STREET NW</p><p>2023324300</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Logan Circle</p><p>397088.79</p><p>137959.45</p><p>279174</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0210    0128</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0329860147,
+          38.929308228,
+          0
+        ]
+      },
+      "properties": {
+        "name": 6,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Target</p><p>3100 14TH STREET NW</p><p>2027773773</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>397140.04</p><p>140158.41</p><p>306304</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2674    0721</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0716152447,
+          38.920934281,
+          0
+        ]
+      },
+      "properties": {
+        "name": 7,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Whole Foods</p><p>2323 WISCONSIN AVENUE NW</p><p>2023335393</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Georgetown</p><p>393789.84</p><p>139230.75</p><p>284358</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1299    1028</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0792147199,
+          38.9491088872,
+          0
+        ]
+      },
+      "properties": {
+        "name": 8,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Whole Foods</p><p>4530 40TH STREET NW</p><p>2022375800</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Tenley Town location</p><p>393133.54</p><p>142358.92</p><p>265175</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1770    0804</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0764593066,
+          38.9655532403,
+          0
+        ]
+      },
+      "properties": {
+        "name": 9,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Magruder's</p><p>5626 Connecticut Ave NW</p><p>(202) 686-5271</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>393373.92</p><p>144184.19</p><p>263860</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1860    0013</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0409938628,
+          38.9242151835,
+          0
+        ]
+      },
+      "properties": {
+        "name": 10,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>1747 COLUMBIA ROAD NW</p><p>2026670774</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>396445.44</p><p>139593.32</p><p>284083</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2580    0512</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0221253052,
+          38.9087707171,
+          0
+        ]
+      },
+      "properties": {
+        "name": 11,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>1400 7th Street NW</p><p>(202) 238-0180</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>398081.2</p><p>137878.29</p><p>304153</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0398    0836</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0322456244,
+          38.9161008811,
+          0
+        ]
+      },
+      "properties": {
+        "name": 12,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Trader Joe's</p><p>1914 14TH STREET NW</p><p>2029861591</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>U street</p><p>397203.72</p><p>138692.26</p><p>302384</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0205    0847</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0675609126,
+          38.9161258855,
+          0
+        ]
+      },
+      "properties": {
+        "name": 13,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>1855 WISCONSIN AVENUE NW</p><p>2023333223</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>394141.03</p><p>138696.71</p><p>224665</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1299    1040</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9809993425,
+          38.8449494802,
+          0
+        ]
+      },
+      "properties": {
+        "name": 14,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>1535 ALABAMA AVENUE SE</p><p>2026106464</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Camp Simms</p><p>401649.66</p><p>130793.59</p><p>306557</p><p>Ward 8</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>5912    0818</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0389558395,
+          38.912057516,
+          0
+        ]
+      },
+      "properties": {
+        "name": 15,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>1701 CORCORAN STREET NW</p><p>2026676825</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>396621.59</p><p>138243.64</p><p>241699</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0155    0231</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0651503993,
+          38.9047675505,
+          0
+        ]
+      },
+      "properties": {
+        "name": 16,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Dean & DeLuca</p><p>3276 M STREET NW</p><p>2023422500</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Georgetown</p><p>394349.18</p><p>137435.69</p><p>273712</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1186    0800</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0319237018,
+          38.9308217391,
+          0
+        ]
+      },
+      "properties": {
+        "name": 17,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>1345 PARK ROAD NW</p><p>2027771077</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Tivoli Square</p><p>397232.21</p><p>140326.39</p><p>297595</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2837    0079</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9866249868,
+          38.8802096614,
+          0
+        ]
+      },
+      "properties": {
+        "name": 18,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Harris Teeter</p><p>1350 POTOMAC AVENUE SE</p><p>2025431040</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Jenkins Row</p><p>401160.72</p><p>134707.64</p><p>303730</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1045    0138</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0577904942,
+          38.9351664266,
+          0
+        ]
+      },
+      "properties": {
+        "name": 19,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Yes! Organic</p><p>3425 CONNECTICUT AVENUE NW</p><p>2023631559</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Cleveland Park</p><p>394989.7</p><p>140809.79</p><p>219254</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2219    0005</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0266923692,
+          38.9067981958,
+          0
+        ]
+      },
+      "properties": {
+        "name": 20,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Capitol Super Market</p><p>1231 11TH STREET NW</p><p>2022891336</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>397685.02</p><p>137659.43</p><p>239341</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0340    0824</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0016470213,
+          38.9004378223,
+          0
+        ]
+      },
+      "properties": {
+        "name": 21,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>300 H STREET NE</p><p>2025485100</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>H street</p><p>399857.33</p><p>136953.04</p><p>308511</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0776    0054</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0183549174,
+          38.9034968009,
+          0
+        ]
+      },
+      "properties": {
+        "name": 22,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>490 L STREET NW</p><p>2027192435</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Mt. Vernon Square</p><p>398408.1</p><p>137292.77</p><p>304767</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0515    0158</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9903974536,
+          38.9368242449,
+          0
+        ]
+      },
+      "properties": {
+        "name": 23,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Yes! Organic</p><p>3809 12TH STREET NE</p><p>2028327715</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Brookland</p><p>400832.73</p><p>140992.28</p><p>30397</p><p>Ward 5</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>3925    0085</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0959621367,
+          38.9174414084,
+          0
+        ]
+      },
+      "properties": {
+        "name": 24,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>4865 MACARTHUR BOULEVARD NW</p><p>2023375649</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>391678.11</p><p>138844.95</p><p>285004</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1389    0025</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0437109707,
+          38.9218044722,
+          0
+        ]
+      },
+      "properties": {
+        "name": 25,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Yes! Organic</p><p>1825 Columbia Rd. NW</p><p>(202) 462-2069</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Adams Morgan</p><p>396209.7</p><p>139325.82</p><p>295011</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2549    0636</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0530144695,
+          38.9041989549,
+          0
+        ]
+      },
+      "properties": {
+        "name": 26,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Trader Joe's</p><p>1101 25TH STREET NW</p><p>2022961921</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>West End</p><p>395401.79</p><p>137371.89</p><p>303613</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0025    0022</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0384418739,
+          38.9219869413,
+          0
+        ]
+      },
+      "properties": {
+        "name": 27,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Harris Teeter</p><p>1631 KALORAMA ROAD NW</p><p>2029861415</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Citadel</p><p>396666.63</p><p>139345.87</p><p>284059</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2572    0036</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.992430946,
+          38.9192298058,
+          0
+        ]
+      },
+      "properties": {
+        "name": 28,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>1050 BRENTWOOD ROAD NE</p><p>2022813900</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>400656.59</p><p>139039.13</p><p>299835</p><p>Ward 5</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>3854    0802</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0385443949,
+          38.9309434271,
+          0
+        ]
+      },
+      "properties": {
+        "name": 29,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>BestWorld</p><p>3178 Mt Pleasant Street NW</p><p>(202) 265-3768</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Used to be Best Way</p><p>396658.16</p><p>140340.12</p><p>233149</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2601    0667</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9780318269,
+          38.9015692906,
+          0
+        ]
+      },
+      "properties": {
+        "name": 30,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Aldi</p><p>901 17TH STREET NE</p><p>0</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>401905.76</p><p>137078.87</p><p>308898</p><p>Ward 5</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>4488    0040</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0749096711,
+          38.9646007198,
+          0
+        ]
+      },
+      "properties": {
+        "name": 31,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>5545 Connecticut Ave NW</p><p>(202) 244-6097</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>393508.13</p><p>144078.34</p><p>263999</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1867    0092</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.095042327,
+          38.9457494317,
+          0
+        ]
+      },
+      "properties": {
+        "name": 32,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Fresh and Greens</p><p>4330 48TH STREET NW</p><p>2022446525</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Same location as A&P</p><p>391761.15</p><p>141987.3</p><p>269574</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1499    0807</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.063172522,
+          38.9445067759,
+          0
+        ]
+      },
+      "properties": {
+        "name": 33,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>4303 CONNECTICUT AVENUE NW</p><p>2023648250</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>394523.79</p><p>141846.96</p><p>301784</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2049    0805</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0255289765,
+          38.9410364721,
+          0
+        ]
+      },
+      "properties": {
+        "name": 34,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Yes! Organic</p><p>4100 Georgia Ave NW</p><p>(202) 291-5790</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Petworth</p><p>397786.99</p><p>141460.14</p><p>300492</p><p>Ward 4</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2910    0810</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0265506219,
+          38.9695284027,
+          0
+        ]
+      },
+      "properties": {
+        "name": 35,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>6500 PINEY BRANCH ROAD NW</p><p>2027235644</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>397699.34</p><p>144623.03</p><p>285341</p><p>Ward 4</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2974    0020</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0272851397,
+          38.9620783219,
+          0
+        ]
+      },
+      "properties": {
+        "name": 36,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Walmart</p><p>5929 GEORGIA AVENUE NW</p><p>2027193770</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>397635.44</p><p>143796.02</p><p>254296</p><p>Ward 4</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>2986    0039</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9946635503,
+          38.8833902666,
+          0
+        ]
+      },
+      "properties": {
+        "name": 37,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Yes! Organic</p><p>410 8TH STREET SE</p><p>2025464325</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>400463.21</p><p>135060.64</p><p>300093</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0925    0026</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.005494555,
+          38.9060230649,
+          0
+        ]
+      },
+      "properties": {
+        "name": 38,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Harris Teeter</p><p>1201 1st St NE</p><p>(202) 589-0351</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Constitution Square</p><p>399523.62</p><p>137573.06</p><p>303728</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0711    0816</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9666732347,
+          38.859032219,
+          0
+        ]
+      },
+      "properties": {
+        "name": 39,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>2845 ALABAMA AVENUE SE</p><p>2025757525</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>402892.75</p><p>132357.23</p><p>278282</p><p>Ward 7</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>5642    0001</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0171618053,
+          38.8776215047,
+          0
+        ]
+      },
+      "properties": {
+        "name": 40,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>1100 4TH STREET SW</p><p>2025549155</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>398511.05</p><p>134420.39</p><p>307170</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0542    0872</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0000965513,
+          38.8762243024,
+          0
+        ]
+      },
+      "properties": {
+        "name": 41,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Harris Teeter</p><p>401 M Street SE</p><p>(202) 554-0164</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>The Yards</p><p>399991.82</p><p>134265.15</p><p>309432</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0771    0811</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0316197616,
+          38.9185067274,
+          0
+        ]
+      },
+      "properties": {
+        "name": 42,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Yes! Organic</p><p>2123 14TH STREET NW</p><p>2022326603</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>U Street</p><p>397258.09</p><p>138959.31</p><p>306454</p><p>Ward 1</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0235    0204</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.023242885,
+          38.9091862352,
+          0
+        ]
+      },
+      "properties": {
+        "name": 43,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Giant</p><p>1414 8th Street  NW</p><p>(202) 234-0215</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>397984.28</p><p>137924.44</p><p>297619</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0398    0834</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9508811562,
+          38.9208509566,
+          0
+        ]
+      },
+      "properties": {
+        "name": 44,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Costco</p><p>2441 MARKET STREET NE</p><p>2022698540</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>404259.71</p><p>139220.21</p><p>309925</p><p>Ward 5</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>4327    0004</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0824644975,
+          38.9523401616,
+          0
+        ]
+      },
+      "properties": {
+        "name": 45,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>4203 DAVENPORT STREET NW</p><p>2023640290</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>392852.16</p><p>142717.87</p><p>301160</p><p>Ward 3</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>1672    0815</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0121619448,
+          38.9003920688,
+          0
+        ]
+      },
+      "properties": {
+        "name": 46,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Walmart</p><p>99 H STREET NW</p><p>2027192110</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>H street</p><p>398960.4</p><p>136949.39</p><p>310062</p><p>Ward 6</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0623    0835</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0490699138,
+          38.9009185733,
+          0
+        ]
+      },
+      "properties": {
+        "name": 47,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Whole Foods</p><p>2201 I STREET NW</p><p>2022961660</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>Foggy Bottom</p><p>395743.74</p><p>137007.55</p><p>310098</p><p>Ward 2</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>0054    0843</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9797723282,
+          38.9005750821,
+          0
+        ]
+      },
+      "properties": {
+        "name": 48,
+        "styleUrl": "#style1",
+        "styleHash": "79c4ebba",
+        "description": "<p>Safeway</p><p>1601 MARYLAND AVENUE NE</p><p>2023986903</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>401754.81</p><p>136968.47</p><p>297814</p><p>Ward 5</p><p>NULL</p><p>NULL</p><p>NULL</p><p>NULL</p><p>4493    0001</p>"
+      }
+    }
+  ]
+}
+
+
 </script>
 
 </body>
