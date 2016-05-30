@@ -22,9 +22,12 @@ var map = new mapboxgl.Map({
     center: [-77.02, 38.90], // starting position
     zoom: 10.67 // starting zoom
 });
-
-map.legendControl.addLegend('<strong>Locations of Grocery Stores and Farmers Markets in Washington, DC</strong>')
-
+var map = L.mapbox.map('map-seven', 'mapbox.streets', {
+    scrollWheelZoom: true,
+    legendControl: {
+        position: 'bottmleft'
+    }
+map.legendControl.addLegend('Grocery Stores & Farmers Markets in Washington, DC')
 </script>
 
 </body>
