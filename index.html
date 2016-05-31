@@ -12,23 +12,7 @@
     </style>
 </head>
 <body>
-
-<style>
-    #fly {
-        display: block;
-        position: relative;
-        margin: 0px auto;
-        width: 50%;
-        height: 40px;
-        padding: 10px;
-        border: none;
-        border-radius: 3px;
-        font-size: 12px;
-        text-align: center;
-        color: #fff;
-        background: #ee8a65;
-    }
-</style>
+  
 <div id='map'></div>
 <br/>
 <button onclick='fly();' id='fly'>Fly</button>
@@ -42,11 +26,6 @@ var map = new mapboxgl.Map({
     center: [-77, 38.9],
     zoom: 10.7
 });
-
-function fly() {
-    map.flyTo({
-        center: [-77.0486, 38.8997]
-    });
 
 map.on('load', function () {
     map.addSource("markers", {
