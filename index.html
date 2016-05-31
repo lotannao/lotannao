@@ -24,7 +24,7 @@ var map = new mapboxgl.Map({
 });
 
 map.on('load', function () {
-    map.addSource("markers", {
+    map.addSource("symbols", {
         "type": "geojson",
         "data": {
             "type": "FeatureCollection",
