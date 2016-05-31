@@ -21,21 +21,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/lotannao/cioripjim000eavngrdyps8nf', //stylesheet location
     center: [-77.02, 38.90], // starting position
     zoom: 10.67 // starting zoom
-});
 
-map.on('load', function(){
-
-    // Add a new source from our GeoJSON data and set the
-    // 'cluster' option to true.
-    map.addSource("farmersmarket", {
-        type: "geojson",
-        // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
-        // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-        data: "https://github.com/lotannao/lotannao/blob/gh-pages/farmersmarket.geojson",
-        cluster: true,
-        clusterMaxZoom: 14, // Max zoom to cluster points on
-        clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
-    });
 });
 </script>
 
