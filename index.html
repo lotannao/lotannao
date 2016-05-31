@@ -43,6 +43,10 @@ var map = new mapboxgl.Map({
     zoom: 10.7
 });
 
+function fly() {
+    map.flyTo({
+        center: [-77.0486, 38.8997]
+    });
 
 map.on('load', function () {
     map.addSource("markers", {
